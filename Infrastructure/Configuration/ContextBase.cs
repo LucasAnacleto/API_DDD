@@ -37,7 +37,7 @@ namespace Infrastructure.Configuration
 
         public string ObterStringConexao()
         {
-            return "Data Source=LAPTOP-Q9MLLNG3;Initial Catalog=API_DDD_BD;Integrated Security=True\\r\\n";
+            return "Data Source=LAPTOP-Q9MLLNG3;Initial Catalog=API_DDD_BD;Integrated Security=True";
         }
     }
 }

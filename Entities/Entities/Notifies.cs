@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Entites
+namespace Entities.Entities
 {
     public class Notifies
     {
+
         public Notifies()
         {
             Notitycoes = new List<Notifies>();
@@ -17,9 +18,12 @@ namespace Entities.Entites
         [NotMapped]
         public string NomePropriedade { get; set; }
 
-        public string Mensagem { get; set; }
+        [NotMapped]
+        public string mensagem { get; set; }
 
+        [NotMapped]
         public List<Notifies> Notitycoes { get; set; }
+
 
         public bool ValidarPropriedadeString(string valor, string nomePropriedade)
         {
@@ -27,11 +31,12 @@ namespace Entities.Entites
             {
                 Notitycoes.Add(new Notifies
                 {
-                    Mensagem = "Campo Obrigatório",
+                    mensagem = "Campo Obrigatório",
                     NomePropriedade = nomePropriedade
                 });
 
                 return false;
+
             }
 
             return true;
@@ -43,14 +48,17 @@ namespace Entities.Entites
             {
                 Notitycoes.Add(new Notifies
                 {
-                    Mensagem = "Campo Obrigatório",
+                    mensagem = "Campo Obrigatório",
                     NomePropriedade = nomePropriedade
                 });
 
                 return false;
+
             }
 
             return true;
         }
+
+
     }
 }
